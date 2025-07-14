@@ -44,6 +44,13 @@ export const portfolioConfig = {
   // Projects
   projects: [
     {
+      title: "Building Management System : Smart Room Monitor",
+      description: `I developed a multi-sensor embedded system on a Raspberry Pi to monitor and automate room conditions for energy efficiency and security. The system utilized five sensors (PIR, DHT11, light, ultrasonic, and RGB color) to control lighting, HVAC, and alert mechanisms based on real-time environmental data. I implemented GPIO interrupt handling for responsive motion detection and displayed live system states on an I2C LCD. To enable remote monitoring and control, I integrated AWS IoT Core via MQTT, allowing sensor data publishing and time-stamped fire alerts. The project emphasized reliable event-driven design, cloud integration, and clear visual feedback.`,
+      technologies: ["Python", "Raspberry Pi", "GPIO", "DHT11", "I2C LCD", "MQTT", "AWS IoT"],
+      image: "https://i.pinimg.com/originals/43/d1/47/43d1471cf25af081f98d782f4b3e8e4b.png",
+      video: "https://drive.google.com/drive/search?dmr=1&ec=wgc-drive-globalnav-goto&q=system",
+    },
+    {
       title: "LiveAid : Financial Impact Dashboard for Displaced Populations",
       description: `I collaborated in a cross-functional team to build LiveAid, a full-stack web dashboard aimed at tracking and analyzing the financial well-being of displaced populations. I contributed to both front-end and back-end development, leveraging Flask for server-side logic and crafting an interactive interface using JavaScript, HTML, and CSS. I led the integration of OpenAI, YouTube, and Yelp APIs to provide personalized educational and resource-based recommendations for users. To ensure performance and scalability, I optimized API usage and implemented persistent session storage for seamless cross-session interactions. Additionally, I introduced and guided the team in using Git version control, significantly improving code collaboration and reducing merge conflicts.`,
       technologies: ["Python", "Flask", "JavaScript", "HTML", "CSS", "REST APIs", "Git"],
