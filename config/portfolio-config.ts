@@ -48,7 +48,7 @@ export const portfolioConfig = {
       description: `I developed a multi-sensor embedded system on a Raspberry Pi to monitor and automate room conditions for energy efficiency and security. The system utilized five sensors (PIR, DHT11, light, ultrasonic, and RGB color) to control lighting, HVAC, and alert mechanisms based on real-time environmental data. I implemented GPIO interrupt handling for responsive motion detection and displayed live system states on an I2C LCD. To enable remote monitoring and control, I integrated AWS IoT Core via MQTT, allowing sensor data publishing and time-stamped fire alerts. The project emphasized reliable event-driven design, cloud integration, and clear visual feedback.`,
       technologies: ["Python", "Raspberry Pi", "GPIO", "DHT11", "I2C LCD", "MQTT", "AWS IoT"],
       image: "https://i.pinimg.com/originals/43/d1/47/43d1471cf25af081f98d782f4b3e8e4b.png",
-      video: "https://drive.google.com/drive/search?dmr=1&ec=wgc-drive-globalnav-goto&q=system",
+      video: "https://drive.google.com/file/d/1tqRvFfZCiipXdtXio86g0N-MJRi58fQ-/view?usp=sharing",
     },
     {
       title: "LiveAid : Financial Impact Dashboard for Displaced Populations",
