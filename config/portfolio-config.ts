@@ -70,7 +70,7 @@ export const portfolioConfig = {
       technologies: ["Next.js", "Convex", "OpenAI", "Python", "Node.js", "Scikit-learn", "Tailwind", "MongoDB"],
       devpost: "https://devpost.com/software/live-aid",
       demo: "https://devpost.com/software/live-aid",
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
     {
       title: "FlightDashboard: AI Flight Advisory System",
@@ -78,7 +78,7 @@ export const portfolioConfig = {
         "AI flight planning tool with weather APIs, 3D route visualization, and Gemini Pro route briefings.",
       technologies: ["React", "Flask", "Python", "Gemini Pro", "Globe.gl", "Weather APIs"],
       github: "https://github.com/trangn12/flightleg-forecaster",
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
     {
       title: "Building Management System: Smart Room Monitor",
@@ -86,14 +86,14 @@ export const portfolioConfig = {
         "Cloud-connected IoT room monitor using sensors, MQTT, AWS IoT, alerts, and LCD state visualization.",
       technologies: ["Raspberry Pi", "Python", "GPIO", "DHT11", "PIR", "I2C LCD", "MQTT", "AWS IoT"],
       demo: "https://drive.google.com/file/d/1tqRvFfZCiipXdtXio86g0N-MJRi58fQ-/view?usp=sharing",
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
     {
       title: "Analog Amplifier Characterization",
       description:
         "MOSFET amplifier simulation and lab validation across gain, bandwidth, biasing, and stability.",
       technologies: ["SPICE", "Oscilloscope", "Breadboard", "Function Generator", "Multimeter"],
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
     {
       title: "Audio-to-LED Real-Time Visualization System",
@@ -109,7 +109,7 @@ export const portfolioConfig = {
       description:
         "Custom Ardupilot drone with ESP32 radio, GPS, LIDAR, PWM motor control, telemetry, and fail-safe tuning.",
       technologies: ["Ardupilot", "ESP32", "ExpressLRS", "PWM", "GPS", "Telemetry", "RF", "Motors", "ESCs"],
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
     {
       title: "Multi-Edge Computing System",
@@ -117,7 +117,7 @@ export const portfolioConfig = {
         "Real-time edge AI defect detection across Jetson, Hailo, Raspberry Pi nodes, TCP networking, and a React dashboard.",
       technologies: ["Jetson Orin Nano", "Raspberry Pi 5", "Hailo AI", "ONNX", "TCP", "Python", "React", "SQLite"],
       demo: "https://noahmathew.github.io/SeniorWeb_EdgeCompute/",
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
     {
       title: "MIPS Pipelined Processor",
@@ -125,7 +125,7 @@ export const portfolioConfig = {
         "32-bit 5-stage pipelined MIPS processor in Verilog, synthesized and tested on a Basys 3 FPGA.",
       technologies: ["Verilog", "Vivado", "FPGA"],
       github: "https://github.com/trangn12/mips-processor",
-      image: "/placeholder.svg",
+      image: "/image-coming-soon.svg",
     },
   ],
 
@@ -206,6 +206,13 @@ export const portfolioConfig = {
       description:
         "Professional reference highlighting product strategy, collaboration, ownership, and impact at Goshsha.",
       file: "/Trang%20Nguyen%20Reference%20-%20Goshsha%20CEO.pdf",
+    },
+    {
+      title: "Faculty Recommendation",
+      author: "Professor Li",
+      description:
+        "Faculty recommendation highlighting academic performance, engineering curiosity, and technical promise.",
+      file: "/LetterFromProfessor%20Li%20(3).pdf",
     },
   ],
 }

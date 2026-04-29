@@ -262,7 +262,7 @@ export default function Home() {
                 A short place for references that adds credibility without interrupting the project flow.
               </p>
             </div>
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {portfolioConfig.recommendations.map((letter) => (
                 <Card
                   key={letter.title}

@@ -94,7 +94,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Link coming soon
             </span>
           )}
-          </div>
+        </div>
       </div>
     </motion.div>
   )
