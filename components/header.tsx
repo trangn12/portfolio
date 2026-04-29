@@ -29,48 +29,33 @@ export function Header() {
     }
   }, [])
 
+  const links = [
+    ["Home", "#home"],
+    ["About", "#about"],
+    ["Skills", "#skills"],
+    ["Projects", "#projects"],
+    ["Experience", "#experience"],
+    ["Letters", "#recommendations"],
+    ["Contact", "#contact"],
+    ["Resume", "/resume"],
+  ]
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
-      <nav className="container mx-auto px-6 py-4">
-        <ul className="flex justify-center space-x-8">
-          <li>
-            <Link href="#home" className="text-foreground hover:text-primary transition-colors">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="#about" className="text-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="#skills" className="text-foreground hover:text-primary transition-colors">
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link href="#projects" className="text-foreground hover:text-primary transition-colors">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="#experience" className="text-foreground hover:text-primary transition-colors">
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link href="#contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link href="/resume" className="text-foreground hover:text-primary transition-colors">
-              Resume
-            </Link>
-          </li>
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-slate-950/55 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-center px-4 py-4 sm:px-6">
+        <ul className="flex max-w-full gap-1 overflow-x-auto rounded-full border border-white/10 bg-white/[0.035] p-1 text-sm text-slate-300">
+          {links.map(([label, href]) => (
+            <li key={href} className="shrink-0">
+              <Link
+                href={href}
+                className="block rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-cyan-200 sm:px-4"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
   )
 }
-

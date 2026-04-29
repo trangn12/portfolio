@@ -1,7 +1,6 @@
 export const portfolioConfig = {
-  // Personal Information
   name: "Trang Nguyen",
-  title: "Computer Engineering Student (UCI '26)",
+  title: "Computer Engineering Student at UC Irvine",
   email: "trangn12@uci.edu",
   phone: "(714)-552-7557",
   location: "Irvine, CA",
@@ -9,160 +8,204 @@ export const portfolioConfig = {
   linkedin: "https://www.linkedin.com/in/trang-nguyen-b93278252/",
   portfolio: "https://your-portfolio-url.com",
 
-  about: `Hello! I build stuff. Welcome to my page :)`,
+  about:
+    "Computer Engineering student at UC Irvine building across software, embedded systems, AI analytics, and product strategy. I like work that connects technical depth with clear user impact, from edge AI systems and IoT monitoring to student-facing platforms and product growth.",
 
-  skillsBackground:
-    "https://sjc.microlink.io/Ayrq0DUDHE0hEiNiQ5oWBt1kco-d2l9aPlR3oCKJknLx0OB_2CgOC4yigr1PkhBZtAZ3JgJ8-UtcT3f717MswA.jpeg",
-
-  // Skills
   skills: [
     {
-      title: "Programming Languages",
-      description: "Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS",
+      title: "Software Engineering",
+      description:
+        "Full-stack apps, APIs, and production-minded web systems.",
       icon: "Code",
+      targets: ["SWE", "Full Stack", "Platform"],
+      tools: ["React", "Next.js", "TypeScript", "Node.js", "Flask"],
     },
     {
-      title: "Frameworks & Tools",
-      description: "React, Node.js, Flask, JUnit, Git, Google Cloud Platform, Visual Studio, IntelliJ",
-      icon: "Wrench",
+      title: "Product & Project Management",
+      description:
+        "Feature planning, stakeholder communication, and team execution.",
+      icon: "Briefcase",
+      targets: ["PM", "TPM", "Project Management"],
+      tools: ["Agile", "A/B Testing", "User Research", "Excel", "PowerPoint"],
     },
     {
-      title: "Hardware",
-      description: "FPGA, Arduino, Signal Processing",
+      title: "Consulting & Strategy",
+      description:
+        "Turn ambiguous needs into clear recommendations and metrics.",
+      icon: "Users",
+      targets: ["Consulting", "Strategy", "Operations"],
+      tools: ["Analytics", "Research", "Workshops", "Reporting", "Tableau"],
+    },
+    {
+      title: "Data, AI & Analytics",
+      description:
+        "ML, dashboards, NLP summaries, and data-backed decisions.",
+      icon: "Database",
+      targets: ["Data", "AI", "Analytics"],
+      tools: ["Python", "SQL", "Pandas", "Scikit-learn", "OpenAI"],
+    },
+    {
+      title: "Embedded & Hardware Systems",
+      description:
+        "Sensor systems, FPGA work, IoT, and hardware debugging.",
       icon: "Cpu",
+      targets: ["Embedded", "Hardware", "Robotics"],
+      tools: ["Verilog", "Vivado", "Raspberry Pi", "Arduino", "MQTT"],
     },
     {
-      title: "Other Skills",
-      description: "R, Assembly,Data Structures, Linux, GTK, Verilog, Vivado",
+      title: "Communication & Leadership",
+      description:
+        "Mentorship, workshops, documentation, and cross-team coordination.",
       icon: "Layers",
+      targets: ["Leadership", "Education", "Client-Facing"],
+      tools: ["Mentorship", "Workshops", "Docs", "Coordination"],
     },
   ],
 
-  // Projects
   projects: [
     {
-      title: "Mocha Minds: A Self Study Tool Kit Using AI",
-      description: `Developed a full-stack web application using Python Flask for the backend and JavaScript, HTML, and CSS for the front end. 
-    Incorporated APIs from OpenAI, YouTube, and Yelp, delivering personalized, diverse results for users while ensuring efficient API usage, preventing resource depletion. 
-    Led the implementation of session storage to manage user data, enabling the development of various features. 
-    Trained the team in Git version control to streamline development and collaboration.`,
-      technologies: ["Python", "Flask", "JavaScript", "HTML", "CSS", "REST APIs", "Git"],
-      github: "https://github.com/trangn12/mocha-minds",
-      devpost: "https://devpost.com/software/mochaminds#updates",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JTxBUGuH8fly9wtJMz2tQXYiEvMnPq.png",
-      video: "https://www.youtube.com/embed/19xaTrmU9SI?si=cIe3iGn4F4EVIvvA",
+      title: "LiveAid: Humanitarian Analytics Platform",
+      description:
+        "Hacktech-winning AI dashboard for conflict impact forecasting, donor tracking, and NLP regional summaries.",
+      technologies: ["Next.js", "Convex", "OpenAI", "Python", "Node.js", "Scikit-learn", "Tailwind", "MongoDB"],
+      devpost: "https://devpost.com/software/live-aid",
+      demo: "https://devpost.com/software/live-aid",
+      image: "/placeholder.svg",
     },
     {
-      title: "Chess Game Using C",
-      description: `Developed backend logic for chess movements using advanced data structures, ensuring accurate and efficient gameplay. 
-    Transitioned the game from a console-based interface to a graphical user interface (GUI), enhancing user experience. 
-    Managed the packaging and installation process for Linux systems, ensuring smooth deployment.`,
-      technologies: ["C", "Data Structures", "Linux", "GTK", "Git"],
-      github: "https://github.com/trangn12/chess-game",
-      demo: "https://www.canva.com/design/DAGCtL19wJg/LMxQyph4SK1u2-czR-4MuA/view?utm_content=DAGCtL19wJg&utm_campaign=designshare&utm_medium=link&utm_source=viewer#10",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OFihmkPR89Km8LiDDLdnYS3NDGb5QD.png",
+      title: "FlightDashboard: AI Flight Advisory System",
+      description:
+        "AI flight planning tool with weather APIs, 3D route visualization, and Gemini Pro route briefings.",
+      technologies: ["React", "Flask", "Python", "Gemini Pro", "Globe.gl", "Weather APIs"],
+      github: "https://github.com/trangn12/flightleg-forecaster",
+      image: "/placeholder.svg",
     },
     {
-      title: "MIPS Pipelined Processor",
-      description: [
-        `Designed and implemented a 32-bit MIPS pipelined processor and 3-bit ALU on the Xilinx Basys3 FPGA using Verilog, 
-    focusing on meeting timing constraints and efficient resource utilization.`,
-        `Conducted comprehensive timing, power, and utilization analysis in Vivado, optimizing the design for performance and efficiency.`,
-        `Verified hardware functionality by generating bitstreams and testing outputs through switches and LEDs, ensuring accurate execution of MIPS instructions.`,
-      ],
-      technologies: ["Verilog", "Vivado", "FPGA"],
-      github: "https://github.com/trangn12/mips-processor",
-      image: "https://th.bing.com/th/id/OIP.hGz_QF_T-VEUbCaN5eoEAgHaEQ?w=261&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
-      /*below is how to add images and text
-      images: [
-        {
-          url: "https://th.bing.com/th/id/OIP.hGz_QF_T-VEUbCaN5eoEAgHaEQ?w=261&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
-          caption: "MIPS Processor Block Diagram",
-        },
-        {
-          url: "https://www.researchgate.net/profile/Kirat-Singh-2/publication/273387993/figure/fig4/AS:286183030177792@1445242759113/Resulant-Waveform-of-Encrypted-Instruction_Q640.jpg",
-          caption: "MIPS Processor Waveform Simulation",
-        },
-      ],*/
+      title: "Building Management System: Smart Room Monitor",
+      description:
+        "Cloud-connected IoT room monitor using sensors, MQTT, AWS IoT, alerts, and LCD state visualization.",
+      technologies: ["Raspberry Pi", "Python", "GPIO", "DHT11", "PIR", "I2C LCD", "MQTT", "AWS IoT"],
+      demo: "https://drive.google.com/file/d/1tqRvFfZCiipXdtXio86g0N-MJRi58fQ-/view?usp=sharing",
+      image: "/placeholder.svg",
+    },
+    {
+      title: "Analog Amplifier Characterization",
+      description:
+        "MOSFET amplifier simulation and lab validation across gain, bandwidth, biasing, and stability.",
+      technologies: ["SPICE", "Oscilloscope", "Breadboard", "Function Generator", "Multimeter"],
+      image: "/placeholder.svg",
     },
     {
       title: "Audio-to-LED Real-Time Visualization System",
-      description: `Developed a Python-based signal processing system using Fast Fourier Transform (FFT) to analyze real-time audio 
-    frequencies and map them to LED colors and brightness. 
-    Captured live audio input, process signals, and control LED arrays, achieving hardware-software synchronization. 
-    Addressed challenges in noise reduction and microphone calibration, optimizing system performance for accurate and 
-    dynamic audio-visual representation.`,
-      technologies: ["Python", "Arduino", "Signal Processing"],
-      github: "https://github.com/trangn12/audio-visualization",
-      demo: "https://youtu.be/p5ENHWJ6zPc",
+      description:
+        "Real-time FFT audio system that maps microphone input to responsive LED patterns with Arduino control.",
+      technologies: ["Python", "Arduino", "Signal Processing", "FFT"],
+      demo: "https://www.youtube.com/watch?v=p5ENHWJ6zPc",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-nJaCwZzTH4PJCLh2n1TG1dwmJegViJ.png",
       video: "https://www.youtube.com/embed/p5ENHWJ6zPc",
     },
-    // Add more projects here as needed
     {
-      title: "Tic-Tac-Toe",
-      description: `C-based game`,
-      technologies: ["C", "Linux"],
-      github: "https://github.com/trangn12/tic-tac-toe",
-      demo: "/projects/tic-tac-toe",
-      presentation:
-        "https://www.canva.com/design/DAGCtL19wJg/LMxQyph4SK1u2-czR-4MuA/view?utm_content=DAGCtL19wJg&utm_campaign=designshare&utm_medium=link&utm_source=viewer#10",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-S0ouhkXn4jg0SDhGHDJW33N4qAAHQy.png",
+      title: "Autonomous Drone Design and Flight",
+      description:
+        "Custom Ardupilot drone with ESP32 radio, GPS, LIDAR, PWM motor control, telemetry, and fail-safe tuning.",
+      technologies: ["Ardupilot", "ESP32", "ExpressLRS", "PWM", "GPS", "Telemetry", "RF", "Motors", "ESCs"],
+      image: "/placeholder.svg",
+    },
+    {
+      title: "Multi-Edge Computing System",
+      description:
+        "Real-time edge AI defect detection across Jetson, Hailo, Raspberry Pi nodes, TCP networking, and a React dashboard.",
+      technologies: ["Jetson Orin Nano", "Raspberry Pi 5", "Hailo AI", "ONNX", "TCP", "Python", "React", "SQLite"],
+      demo: "https://noahmathew.github.io/SeniorWeb_EdgeCompute/",
+      image: "/placeholder.svg",
+    },
+    {
+      title: "MIPS Pipelined Processor",
+      description:
+        "32-bit 5-stage pipelined MIPS processor in Verilog, synthesized and tested on a Basys 3 FPGA.",
+      technologies: ["Verilog", "Vivado", "FPGA"],
+      github: "https://github.com/trangn12/mips-processor",
+      image: "/placeholder.svg",
     },
   ],
 
-  // Education
   education: [
     {
       degree: "Bachelor of Science in Computer Engineering",
       institution: "University of California, Irvine",
-      duration: "Expected Graduation - June 2026",
-      description: "Relevant coursework: Digital Systems, Computer Architecture, Embedded Systems",
+      duration: "Expected June 2026",
+      description:
+        "Honors: Campus-Wide Honors Collegium Invitee, Dean's List. Coursework: Data Structures & Algorithms, Computer Architecture, Machine Learning for Engineers, Network Analysis, Signals & Systems, Object-Oriented Programming.",
     },
   ],
 
-  // Work Experience
   experience: [
     {
       title: "Technical Director",
       company: "UCI Engineering Student Council",
-      duration: "June 2024 – Present",
-      description: `Led the development of a new portfolio website to showcase ESC activities and support corporate sponsorship efforts 
-    using tools such as React, Node.js, and Google Cloud Services. 
-    Manage and update the ESC and P-Council websites, enhancing user interface and automating content management. 
-    Oversee EScan, the registration system for E-Week, integrating student verification protocols and automating event entry.`,
-      technologies: ["React", "Node.js", "Google Cloud Services"],
+      duration: "June 2024 - June 2025",
+      description:
+        "Developing a room-booking and event-management platform used by 3,000+ students and 500+ faculty, featuring a custom Next.js/TypeScript calendar with Firestore transactions to prevent double-booking.\n\nAutomating participant verification and reporting via Google Cloud Datastore, improving scheduling accuracy and saving 15+ admin hours per event cycle.",
+      technologies: ["Next.js", "TypeScript", "Firestore", "Google Cloud", "Product Operations"],
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-u6LGmOZMMN99pjQiZuaehzIoMgoiLE.png",
       moreInfo: "https://esc.eng.uci.edu/committee/cabinet.html",
     },
     {
-      title: "Brand Ambassador",
+      title: "Engineering Student Success Coach",
+      company: "UCI Samueli School of Engineering Undergraduate Advising Office",
+      duration: "January 2025 - Present",
+      description:
+        "Mentor 30+ undergraduates each quarter in study strategies, technical skill building, and career readiness, helping students raise average course grades by one letter.\n\nConduct workshops on time management and internship readiness integrating engineering-specific tools.",
+      technologies: ["Mentorship", "Workshop Facilitation", "Career Readiness", "Academic Coaching"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-uci-advising-NTxBUGuH8fly9wtJMz2tQXYiEvMnPq.png",
+      moreInfo:
+        "https://undergraduate.eng.uci.edu/students/engineering-student-success-coaches/",
+    },
+    {
+      title: "Webmaster",
+      company: "FSAE Electric Racing at UC Irvine",
+      duration: "January 2025 - March 2026",
+      description:
+        "Rebuilt and deployed the team's official website using Next.js, enhancing visibility for 20+ sponsors and 80+ team members.",
+      technologies: ["Next.js", "Web Deployment", "Sponsor Visibility", "Team Operations"],
+      image: "/placeholder.svg",
+    },
+    {
+      title: "Technical Product & Strategy Specialist",
       company: "Goshsha",
-      duration: "Jun. 2024 – Present",
-      description: `Led a campus outreach campaign to boost app visibility, focusing on targeted promotion strategies that increased app 
-    downloads and user engagement by 20%. Created and optimized tech-related reels on Instagram and TikTok using data-driven insights, 
-    driving a 25% increase in views and quadrupling user interactions by enhancing brand awareness by showcasing the app's key features. 
-    Collected and relayed valuable user feedback to the app development team, resulting in feature updates and improvements.`,
-      technologies: ["Data Analysis", "Social Media", "User Experience"],
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-gosshha-NTxBUGuH8fly9wtJMz2tQXYiEvMnPq.png",
+      duration: "June 2024 - June 2025",
+      description:
+        "Led product strategy and feature prioritization using A/B testing, user research, and behavior analytics; increased app engagement by 25% and adoption by 200%.\n\nCoordinated with developers to implement scalable UI/UX updates based on real-time feedback, improving system stability and release velocity.",
+      technologies: ["Product Strategy", "A/B Testing", "User Research", "Behavior Analytics", "UI/UX"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-gosshha-NTxBUGuH8fly9wtJMz2tQXYiEvMnPq.png",
       moreInfo:
         "https://www.linkedin.com/posts/trang-nguyen-b93278252_goshsha-productdiscovery-innovation-activity-7234321791937064960-nP5H?utm_source=share&utm_medium=member_desktop",
     },
     {
-      title: "Academic Success Coach",
-      company: "UCI Engineering Undergraduate Advising Office",
-      duration: "Sep 2024 - Present",
-      description: `Provided one-on-one academic coaching to engineering students, helping them improve study strategies, time 
-    management, and problem-solving skills. Conducted workshops and guided students to university resources, ensuring access to tutoring, 
-    counseling, and academic support. Utilize NASPA-certified coaching techniques to support student success in overcoming academic challenges.`,
-      technologies: ["NASPA Coaching", "Workshop Facilitation", "Academic Support"],
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-uci-advising-NTxBUGuH8fly9wtJMz2tQXYiEvMnPq.png",
-      moreInfo:
-        "https://undergraduate.eng.uci.edu/students/engineering-student-success-coaches/#:~:text=Our%20Engineering%20Student%20Success%20Coaches%20provide%20one-on-one%20sessions,students%20to%20help%20address%20academic%20and%20personal%20needs.",
+      title: "Embedded Engineer",
+      company: "FSAE Electric Racing at UC Irvine",
+      duration: "December 2025 - Present",
+      description:
+        "Supported hardware-in-the-loop and vehicle-level testing by verifying GPS data integrity, failure modes, and communication robustness.\n\nInvestigated and debugged sensor discrepancies through firmware instrumentation and test logging.",
+      technologies: ["HIL Testing", "GPS", "Firmware Instrumentation", "Sensor Debugging", "Test Logging"],
+      image: "/placeholder.svg",
     },
-    // Add more experiences here as needed
+  ],
+
+  recommendations: [
+    {
+      title: "Academic Recommendation",
+      author: "Trang Nguyen LOR",
+      description:
+        "Recommendation letter highlighting academic strength, technical growth, and engineering potential.",
+      file: "/Trang%20Nguyen%20LOR.pdf",
+    },
+    {
+      title: "Professional Reference",
+      author: "Goshsha CEO",
+      description:
+        "Professional reference highlighting product strategy, collaboration, ownership, and impact at Goshsha.",
+      file: "/Trang%20Nguyen%20Reference%20-%20Goshsha%20CEO.pdf",
+    },
   ],
 }
-
