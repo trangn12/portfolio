@@ -1,7 +1,7 @@
 export const portfolioConfig = {
   // Personal Information
   name: "Trang Nguyen",
-  title: "Computer Engineering Student",
+  title: "Computer Engineering Student (UCI '26)",
   email: "trangn12@uci.edu",
   phone: "(714)-552-7557",
   location: "Irvine, CA",
