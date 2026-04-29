@@ -9,10 +9,7 @@ export const portfolioConfig = {
   linkedin: "https://www.linkedin.com/in/trang-nguyen-b93278252/",
   portfolio: "https://your-portfolio-url.com",
 
-  about: `I'm a Computer Engineering student at the University of California, Irvine, expected to graduate in June 2026. 
-  I'm passionate about developing innovative solutions in software development, embedded systems, and hardware-software integration. 
-  With experience in various programming languages and frameworks, I've worked on projects ranging from AI-powered study tools to 
-  MIPS pipelined processors.`,
+  about: `Hello! I build stuff. Welcome to my page :)`,
 
   skillsBackground:
     "https://sjc.microlink.io/Ayrq0DUDHE0hEiNiQ5oWBt1kco-d2l9aPlR3oCKJknLx0OB_2CgOC4yigr1PkhBZtAZ3JgJ8-UtcT3f717MswA.jpeg",
