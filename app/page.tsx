@@ -6,13 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  BarChart3,
-  Briefcase,
-  Code,
-  Cpu,
-  Database,
   Github,
-  Layers,
   Linkedin,
   Mail,
   Phone,
@@ -20,22 +14,11 @@ import {
   ExternalLink,
   ArrowRight,
   FileText,
-  Users,
 } from "lucide-react"
 import { portfolioConfig } from "../config/portfolio-config"
 import Image from "next/image"
 import { ProjectCard } from "@/components/project-card"
 import { useRouter } from "next/navigation"
-
-const icons = {
-  BarChart3,
-  Briefcase,
-  Cpu,
-  Code,
-  Database,
-  Layers,
-  Users,
-} as const
 
 const sectionLabel = "text-sm font-medium uppercase tracking-[0.22em] text-cyan-300/80"
 const sectionTitle = "mt-3 text-3xl font-bold text-white md:text-5xl"
@@ -43,6 +26,7 @@ const sectionCopy = "mt-4 max-w-2xl text-base leading-7 text-slate-300"
 
 export default function Home() {
   const router = useRouter()
+  const runningSkills = Array.from(new Set(portfolioConfig.skills.flatMap((skill) => skill.tools)))
 
   return (
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -144,49 +128,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" className="relative px-6 py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className={sectionLabel}>Skills</div>
-            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-              <h2 className={sectionTitle}>A practical engineering toolkit.</h2>
-              <p className={sectionCopy}>From low-level hardware constraints to interactive web experiences.</p>
-            </div>
-            <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {portfolioConfig.skills.map((skill) => {
-                const Icon = icons[skill.icon as keyof typeof icons]
-                return (
-                  <Card key={skill.title} className="group border-white/10 bg-white/[0.045] backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-white/[0.07]">
-                    <CardContent className="flex min-h-64 flex-col p-6">
-                      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-200">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
-                      <p className="mt-4 line-clamp-2 leading-7 text-slate-300">{skill.description}</p>
-                      <div className="mt-5 flex flex-wrap gap-2">
-                        {skill.targets.map((target) => (
-                          <Badge key={target} variant="secondary" className="border border-emerald-300/15 bg-emerald-300/10 text-emerald-200">
-                            {target}
-                          </Badge>
-                        ))}
-                      </div>
-                      <div className="mt-auto pt-5">
-                        <div className="mb-2 text-xs font-medium uppercase tracking-[0.18em] text-slate-500">Tools</div>
-                        <div className="flex flex-wrap gap-2">
-                          {skill.tools.slice(0, 5).map((tool) => (
-                            <span key={tool} className="rounded-full border border-white/10 bg-slate-950/45 px-3 py-1 text-xs text-slate-300">
-                              {tool}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                )
-              })}
-            </div>
-          </div>
-        </section>
-
         <section id="projects" className="relative px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <div className={sectionLabel}>Projects</div>
@@ -198,6 +139,28 @@ export default function Home() {
               {portfolioConfig.projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" className="relative px-6 py-16">
+          <div className="mx-auto max-w-7xl">
+            <div className={sectionLabel}>Skills</div>
+            <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+              <h2 className="mt-3 text-2xl font-bold text-white md:text-4xl">Running toolkit.</h2>
+              <p className={sectionCopy}>The languages, frameworks, and systems tools I keep reaching for.</p>
+            </div>
+            <div className="group mt-8 overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              <div className="flex w-max animate-skills-marquee gap-4 group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+                {[...runningSkills, ...runningSkills].map((skill, index) => (
+                  <span
+                    key={`${skill}-${index}`}
+                    className="shrink-0 rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-sm text-slate-300 backdrop-blur"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>

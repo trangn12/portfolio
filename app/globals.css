@@ -103,3 +103,16 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+@keyframes skills-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-skills-marquee {
+  animation: skills-marquee 34s linear infinite;
+}

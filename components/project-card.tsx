@@ -12,6 +12,8 @@ interface ProjectCardProps {
     description: string | string[]
     technologies: string[]
     image: string
+    imageFit?: "cover" | "contain"
+    imagePosition?: string
     github?: string
     demo?: string
     devpost?: string
@@ -51,7 +53,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
             src={project.image || "/placeholder.svg"}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
+            className={`${project.imageFit === "contain" ? "object-contain p-4" : "object-cover"} transition-transform duration-300 group-hover:scale-110`}
+            style={{ objectPosition: project.imagePosition }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 to-transparent" />
         </div>

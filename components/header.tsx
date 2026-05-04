@@ -32,8 +32,8 @@ export function Header() {
   const links = [
     ["Home", "#home"],
     ["About", "#about"],
-    ["Skills", "#skills"],
     ["Projects", "#projects"],
+    ["Skills", "#skills"],
     ["Experience", "#experience"],
     ["Letters", "#recommendations"],
     ["Contact", "#contact"],

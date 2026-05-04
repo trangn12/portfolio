@@ -64,13 +64,29 @@ export const portfolioConfig = {
 
   projects: [
     {
-      title: "LiveAid: Humanitarian Analytics Platform",
+      title: "Multi-Edge Computing System",
       description:
-        "Hacktech-winning AI dashboard for conflict impact forecasting, donor tracking, and NLP regional summaries.",
+        "Real-time edge AI defect detection across Jetson, Hailo, Raspberry Pi nodes, TCP networking, and a React dashboard.",
+      technologies: ["Jetson Orin Nano", "Raspberry Pi 5", "Hailo AI", "ONNX", "TCP", "Python", "React", "SQLite"],
+      demo: "https://noahmathew.github.io/SeniorWeb_EdgeCompute/",
+      image: "/argus.png",
+      imagePosition: "center top",
+    },
+    {
+      title: "LiveAid: Humanitarian Analytics Platform (Hacktech Winner)",
+      description:
+        "AI dashboard for conflict impact forecasting, donor tracking, and NLP regional summaries.",
       technologies: ["Next.js", "Convex", "OpenAI", "Python", "Node.js", "Scikit-learn", "Tailwind", "MongoDB"],
       devpost: "https://devpost.com/software/live-aid",
       demo: "https://devpost.com/software/live-aid",
-      image: "/image-coming-soon.svg",
+      image: "/project-liveaid.jpg",
+    },
+    {
+      title: "Autonomous Drone Design and Flight",
+      description:
+        "Custom Ardupilot drone with ESP32 radio, GPS, LIDAR, PWM motor control, telemetry, and fail-safe tuning.",
+      technologies: ["Ardupilot", "ESP32", "ExpressLRS", "PWM", "GPS", "Telemetry", "RF", "Motors", "ESCs"],
+      image: "/project-autonomous-drone.jpeg",
     },
     {
       title: "FlightDashboard: AI Flight Advisory System",
@@ -78,7 +94,7 @@ export const portfolioConfig = {
         "AI flight planning tool with weather APIs, 3D route visualization, and Gemini Pro route briefings.",
       technologies: ["React", "Flask", "Python", "Gemini Pro", "Globe.gl", "Weather APIs"],
       github: "https://github.com/trangn12/flightleg-forecaster",
-      image: "/image-coming-soon.svg",
+      image: "/project-flight-dashboard.png",
     },
     {
       title: "Building Management System: Smart Room Monitor",
@@ -86,14 +102,14 @@ export const portfolioConfig = {
         "Cloud-connected IoT room monitor using sensors, MQTT, AWS IoT, alerts, and LCD state visualization.",
       technologies: ["Raspberry Pi", "Python", "GPIO", "DHT11", "PIR", "I2C LCD", "MQTT", "AWS IoT"],
       demo: "https://drive.google.com/file/d/1tqRvFfZCiipXdtXio86g0N-MJRi58fQ-/view?usp=sharing",
-      image: "/image-coming-soon.svg",
+      image: "/project-smart-room-monitor.png",
     },
     {
       title: "Analog Amplifier Characterization",
       description:
         "MOSFET amplifier simulation and lab validation across gain, bandwidth, biasing, and stability.",
       technologies: ["SPICE", "Oscilloscope", "Breadboard", "Function Generator", "Multimeter"],
-      image: "/image-coming-soon.svg",
+      image: "/project-analog-amplifier.png",
     },
     {
       title: "Audio-to-LED Real-Time Visualization System",
@@ -105,19 +121,13 @@ export const portfolioConfig = {
       video: "https://www.youtube.com/embed/p5ENHWJ6zPc",
     },
     {
-      title: "Autonomous Drone Design and Flight",
+      title: "MochaMinds: AI Self-Study Toolkit",
       description:
-        "Custom Ardupilot drone with ESP32 radio, GPS, LIDAR, PWM motor control, telemetry, and fail-safe tuning.",
-      technologies: ["Ardupilot", "ESP32", "ExpressLRS", "PWM", "GPS", "Telemetry", "RF", "Motors", "ESCs"],
-      image: "/image-coming-soon.svg",
-    },
-    {
-      title: "Multi-Edge Computing System",
-      description:
-        "Real-time edge AI defect detection across Jetson, Hailo, Raspberry Pi nodes, TCP networking, and a React dashboard.",
-      technologies: ["Jetson Orin Nano", "Raspberry Pi 5", "Hailo AI", "ONNX", "TCP", "Python", "React", "SQLite"],
-      demo: "https://noahmathew.github.io/SeniorWeb_EdgeCompute/",
-      image: "/image-coming-soon.svg",
+        "Full-stack study toolkit with AI-driven recommendations across OpenAI, YouTube, and Yelp APIs, plus session storage for persistent user data.",
+      technologies: ["Python", "Flask", "JavaScript", "HTML", "CSS", "REST APIs", "OpenAI"],
+      devpost: "https://devpost.com/software/mochaminds",
+      demo: "https://devpost.com/software/mochaminds",
+      image: "/project-mochaminds.jpg",
     },
     {
       title: "MIPS Pipelined Processor",
@@ -125,7 +135,7 @@ export const portfolioConfig = {
         "32-bit 5-stage pipelined MIPS processor in Verilog, synthesized and tested on a Basys 3 FPGA.",
       technologies: ["Verilog", "Vivado", "FPGA"],
       github: "https://github.com/trangn12/mips-processor",
-      image: "/image-coming-soon.svg",
+      image: "/project-mips-processor.png",
     },
   ],
 
@@ -141,14 +151,13 @@ export const portfolioConfig = {
 
   experience: [
     {
-      title: "Technical Director",
-      company: "UCI Engineering Student Council",
-      duration: "June 2024 - June 2025",
+      title: "Embedded Engineer",
+      company: "FSAE Electric Racing at UC Irvine",
+      duration: "December 2025 - Present",
       description:
-        "Developing a room-booking and event-management platform used by 3,000+ students and 500+ faculty, featuring a custom Next.js/TypeScript calendar with Firestore transactions to prevent double-booking.\n\nAutomating participant verification and reporting via Google Cloud Datastore, improving scheduling accuracy and saving 15+ admin hours per event cycle.",
-      technologies: ["Next.js", "TypeScript", "Firestore", "Google Cloud", "Product Operations"],
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-u6LGmOZMMN99pjQiZuaehzIoMgoiLE.png",
-      moreInfo: "https://esc.eng.uci.edu/committee/cabinet.html",
+        "Supported hardware-in-the-loop and vehicle-level testing by verifying GPS data integrity, failure modes, and communication robustness.\n\nInvestigated and debugged sensor discrepancies through firmware instrumentation and test logging.",
+      technologies: ["HIL Testing", "GPS", "Firmware Instrumentation", "Sensor Debugging", "Test Logging"],
+      image: "/placeholder.svg",
     },
     {
       title: "Engineering Student Success Coach",
@@ -171,6 +180,16 @@ export const portfolioConfig = {
       image: "/placeholder.svg",
     },
     {
+      title: "Technical Director",
+      company: "UCI Engineering Student Council",
+      duration: "June 2024 - June 2025",
+      description:
+        "Developing a room-booking and event-management platform used by 3,000+ students and 500+ faculty, featuring a custom Next.js/TypeScript calendar with Firestore transactions to prevent double-booking.\n\nAutomating participant verification and reporting via Google Cloud Datastore, improving scheduling accuracy and saving 15+ admin hours per event cycle.",
+      technologies: ["Next.js", "TypeScript", "Firestore", "Google Cloud", "Product Operations"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-u6LGmOZMMN99pjQiZuaehzIoMgoiLE.png",
+      moreInfo: "https://esc.eng.uci.edu/committee/cabinet.html",
+    },
+    {
       title: "Technical Product & Strategy Specialist",
       company: "Goshsha",
       duration: "June 2024 - June 2025",
@@ -181,21 +200,12 @@ export const portfolioConfig = {
       moreInfo:
         "https://www.linkedin.com/posts/trang-nguyen-b93278252_goshsha-productdiscovery-innovation-activity-7234321791937064960-nP5H?utm_source=share&utm_medium=member_desktop",
     },
-    {
-      title: "Embedded Engineer",
-      company: "FSAE Electric Racing at UC Irvine",
-      duration: "December 2025 - Present",
-      description:
-        "Supported hardware-in-the-loop and vehicle-level testing by verifying GPS data integrity, failure modes, and communication robustness.\n\nInvestigated and debugged sensor discrepancies through firmware instrumentation and test logging.",
-      technologies: ["HIL Testing", "GPS", "Firmware Instrumentation", "Sensor Debugging", "Test Logging"],
-      image: "/placeholder.svg",
-    },
   ],
 
   recommendations: [
     {
       title: "Academic Recommendation",
-      author: "Trang Nguyen LOR",
+      author: "Engineering Advisor",
       description:
         "Recommendation letter highlighting academic strength, technical growth, and engineering potential.",
       file: "/Trang%20Nguyen%20LOR.pdf",
