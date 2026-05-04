@@ -26,7 +26,6 @@ const sectionCopy = "mt-4 max-w-2xl text-base leading-7 text-slate-300"
 
 export default function Home() {
   const router = useRouter()
-  const runningSkills = Array.from(new Set(portfolioConfig.skills.flatMap((skill) => skill.tools)))
 
   return (
     <div className="min-h-screen overflow-hidden bg-background text-foreground">
@@ -147,19 +146,82 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <div className={sectionLabel}>Skills</div>
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
-              <h2 className="mt-3 text-2xl font-bold text-white md:text-4xl">Running toolkit.</h2>
-              <p className={sectionCopy}>The languages, frameworks, and systems tools I keep reaching for.</p>
+              <h2 className="mt-3 text-2xl font-bold text-white md:text-4xl">Technical toolkit.</h2>
+              <p className={sectionCopy}>Systems-focused engineering across intelligent, real-time applications.</p>
             </div>
-            <div className="group mt-8 overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-              <div className="flex w-max animate-skills-marquee gap-4 group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-                {[...runningSkills, ...runningSkills].map((skill, index) => (
-                  <span
-                    key={`${skill}-${index}`}
-                    className="shrink-0 rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-sm text-slate-300 backdrop-blur"
-                  >
-                    {skill}
-                  </span>
+            <div className="mt-8 grid items-start gap-3 md:grid-cols-2">
+              {portfolioConfig.skills.map((group, groupIndex) => (
+                <details
+                  key={group.title}
+                  className={`group rounded-lg border p-4 backdrop-blur transition hover:-translate-y-0.5 hover:opacity-100 open:bg-white/[0.04] ${
+                    group.title === "Embedded Systems & Hardware" || group.title === "AI & Machine Learning"
+                      ? "border-cyan-300/25 bg-cyan-300/[0.04] open:border-cyan-300/45"
+                      : "border-white/10 bg-white/[0.025] opacity-85 open:border-cyan-300/25"
+                  }`}
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                    <div>
+                      <h3 className="text-sm font-semibold text-white">{group.title}</h3>
+                      <p className="mt-1 line-clamp-1 text-xs text-slate-500">{group.description}</p>
+                    </div>
+                    <span className="text-lg leading-none text-cyan-200 transition group-open:rotate-45">+</span>
+                  </summary>
+                  <div className="mt-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+                    <div
+                      className={`flex w-max animate-skills-marquee gap-3 group-hover:[animation-play-state:paused] motion-reduce:animate-none ${
+                        groupIndex % 2 === 1 ? "[animation-direction:reverse]" : ""
+                      }`}
+                    >
+                      {[...group.tools, ...group.tools].map((tool, index) => (
+                        <span
+                          key={`${group.title}-${tool}-${index}`}
+                          className="shrink-0 rounded-full border border-white/10 bg-slate-950/45 px-3 py-1.5 text-xs text-slate-300 transition hover:-translate-y-0.5 hover:border-cyan-300/35 hover:text-cyan-100"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="mt-4 grid gap-2">
+                    {group.proof?.slice(0, 3).map((item) => (
+                      <div key={item} className="rounded-md border border-white/10 bg-slate-950/30 px-3 py-2 text-xs leading-5 text-slate-400">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              ))}
+            </div>
+            <div className="mt-8 rounded-lg border border-emerald-300/20 bg-emerald-300/[0.035] p-5 backdrop-blur">
+              <div className="flex flex-col justify-between gap-2 md:flex-row md:items-end">
+                <div>
+                  <div className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">Where I&apos;ve Applied This</div>
+                  <h3 className="mt-3 text-xl font-semibold text-white">Skills tied to shipped systems.</h3>
+                </div>
+                <p className="max-w-xl text-sm leading-6 text-slate-400">Proof that the toolkit shows up in real work.</p>
+              </div>
+              <div className="mt-5">
+                {portfolioConfig.appliedStacks.slice(0, 1).map((item) => (
+                  <div key={item.project} className="rounded-md border border-white/10 bg-slate-950/35 p-4 transition hover:-translate-y-0.5 hover:border-emerald-300/30">
+                    <div className="font-semibold text-white">{item.project}</div>
+                    <div className="mt-2 text-sm leading-6 text-cyan-100">{item.stack}</div>
+                    <div className="mt-3 text-sm leading-6 text-slate-400">{item.impact}</div>
+                  </div>
                 ))}
+                <details className="group/applied mt-3">
+                  <summary className="cursor-pointer list-none rounded-md border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-medium text-slate-300 transition hover:border-emerald-300/30 hover:text-emerald-100">
+                    Show 2 more applied stacks
+                  </summary>
+                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                    {portfolioConfig.appliedStacks.slice(1).map((item) => (
+                      <div key={item.project} className="rounded-md border border-white/10 bg-slate-950/35 p-4 transition hover:-translate-y-0.5 hover:border-emerald-300/30">
+                        <div className="font-semibold text-white">{item.project}</div>
+                        <div className="mt-2 text-sm leading-6 text-cyan-100">{item.stack}</div>
+                        <div className="mt-3 text-sm leading-6 text-slate-400">{item.impact}</div>
+                      </div>
+                    ))}
+                  </div>
+                </details>
               </div>
             </div>
           </div>

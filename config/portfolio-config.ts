@@ -13,52 +13,94 @@ export const portfolioConfig = {
 
   skills: [
     {
-      title: "Software Engineering",
+      title: "Programming Languages",
       description:
-        "Full-stack apps, APIs, and production-minded web systems.",
+        "Core languages for software, systems, hardware, and data work.",
       icon: "Code",
-      targets: ["SWE", "Full Stack", "Platform"],
-      tools: ["React", "Next.js", "TypeScript", "Node.js", "Flask"],
+      targets: ["Software", "Systems", "Hardware"],
+      tools: ["Python", "C/C++", "JavaScript/TypeScript", "SQL", "Verilog", "Assembly"],
+      proof: ["Python for AI/data pipelines", "C/C++ for embedded control", "Verilog/Assembly for hardware-level design"],
     },
     {
-      title: "Product & Project Management",
+      title: "Software & Full-Stack Development",
       description:
-        "Feature planning, stakeholder communication, and team execution.",
-      icon: "Briefcase",
-      targets: ["PM", "TPM", "Project Management"],
-      tools: ["Agile", "A/B Testing", "User Research", "Excel", "PowerPoint"],
+        "Full-stack web systems from frontend to backend APIs.",
+      icon: "Code",
+      targets: ["Full Stack", "Web", "APIs"],
+      tools: ["React", "Next.js", "Node.js", "Express.js", "Flask", "REST APIs", "Tailwind CSS", "HTML/CSS"],
+      proof: ["React/Next.js dashboards", "Flask API services", "REST integrations across AI and external APIs"],
     },
     {
-      title: "Consulting & Strategy",
+      title: "Embedded Systems & Hardware",
       description:
-        "Turn ambiguous needs into clear recommendations and metrics.",
-      icon: "Users",
-      targets: ["Consulting", "Strategy", "Operations"],
-      tools: ["Analytics", "Research", "Workshops", "Reporting", "Tableau"],
-    },
-    {
-      title: "Data, AI & Analytics",
-      description:
-        "ML, dashboards, NLP summaries, and data-backed decisions.",
-      icon: "Database",
-      targets: ["Data", "AI", "Analytics"],
-      tools: ["Python", "SQL", "Pandas", "Scikit-learn", "OpenAI"],
-    },
-    {
-      title: "Embedded & Hardware Systems",
-      description:
-        "Sensor systems, FPGA work, IoT, and hardware debugging.",
+        "Real-time hardware control, sensors, and edge devices.",
       icon: "Cpu",
       targets: ["Embedded", "Hardware", "Robotics"],
-      tools: ["Verilog", "Vivado", "Raspberry Pi", "Arduino", "MQTT"],
+      tools: ["ESP32", "Raspberry Pi", "Jetson Nano/Orin", "GPIO", "I2C", "SPI", "UART", "PWM", "Embedded C", "Real-Time Systems"],
+      proof: ["ESP32 real-time control", "Raspberry Pi edge systems", "I2C/SPI/UART multi-sensor integration"],
     },
     {
-      title: "Communication & Leadership",
+      title: "AI & Machine Learning",
       description:
-        "Mentorship, workshops, documentation, and cross-team coordination.",
+        "Computer vision, model evaluation, and deployment workflows.",
+      icon: "Database",
+      targets: ["AI", "ML", "Vision"],
+      tools: ["PyTorch", "TensorFlow", "Scikit-learn", "OpenCV", "Ultralytics YOLO", "ONNX Runtime", "Model Evaluation", "Data Preprocessing"],
+      proof: ["YOLO/OpenCV vision pipelines", "ONNX Runtime deployment", "model evaluation and preprocessing workflows"],
+    },
+    {
+      title: "Cloud & DevOps",
+      description:
+        "Cloud platforms, containers, Linux environments, and deployment pipelines.",
       icon: "Layers",
-      targets: ["Leadership", "Education", "Client-Facing"],
-      tools: ["Mentorship", "Workshops", "Docs", "Coordination"],
+      targets: ["Cloud", "DevOps", "Deploy"],
+      tools: ["AWS", "Google Cloud Platform (GCP)", "Docker", "Linux", "CI/CD Pipelines"],
+      proof: ["cloud-connected IoT workflows", "Linux-based deployment", "containerized and CI/CD-ready development"],
+    },
+    {
+      title: "Data & Systems",
+      description:
+        "Databases, analysis, systems design, networking, and distributed applications.",
+      icon: "Database",
+      targets: ["Data", "Systems", "Networking"],
+      tools: ["SQL/NoSQL Databases", "Data Analysis", "System Design", "Distributed Systems", "TCP/IP Networking"],
+      proof: ["TCP networking for edge nodes", "SQL/NoSQL persistence", "distributed system coordination"],
+    },
+    {
+      title: "Tools & Technologies",
+      description:
+        "Developer tooling, platforms, and engineering workflow tools.",
+      icon: "Layers",
+      targets: ["Tools", "Platforms", "Workflow"],
+      tools: ["Git", "Postman", "MongoDB", "Firebase", "Vercel", "Vim", "Vivado", "Trello", "Alteryx Designer"],
+      proof: ["Git workflow leadership", "API testing with Postman", "deployment through Vercel/Firebase"],
+    },
+    {
+      title: "Product & Cross-Functional",
+      description:
+        "Product thinking, experimentation, research, collaboration, and communication.",
+      icon: "Briefcase",
+      targets: ["Product", "Research", "Leadership"],
+      tools: ["A/B Testing", "User Research", "Data-Driven Decision Making", "Agile Development", "Technical Communication"],
+      proof: ["A/B testing and product analytics", "user research for prioritization", "technical communication across teams"],
+    },
+  ],
+
+  appliedStacks: [
+    {
+      project: "Multi-Edge Computing System",
+      stack: "Jetson Orin, Raspberry Pi, Hailo AI, ONNX, TCP, React",
+      impact: "Real-time distributed defect detection across edge devices.",
+    },
+    {
+      project: "Building Management System",
+      stack: "Raspberry Pi, GPIO, DHT11, PIR, MQTT, AWS IoT",
+      impact: "Cloud-connected room monitoring with sensor alerts.",
+    },
+    {
+      project: "FlightDashboard",
+      stack: "React, Flask, Gemini Pro, Weather APIs, Globe.gl",
+      impact: "AI-assisted route planning with live weather context.",
     },
   ],
 
